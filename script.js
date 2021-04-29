@@ -15,7 +15,7 @@ const printRandomMessage = (list1, list2, list3) => {
     let selection1 = Math.floor((Math.random() * list1.length));
     let selection2 = Math.floor((Math.random() * list2.length));
     let selection3 = Math.floor((Math.random() * list3.length));
-    console.log(list1[selection1]);
+    console.log(`Remember: ${list1[selection1]}`);
     console.log(list2[selection2]);
     console.log(`For insight read "${list3[selection3]}" by Paul Graham`);
 }
