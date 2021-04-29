@@ -1,8 +1,8 @@
 /* Mixed Messages is a program that generates a random inspiration message 
 for a founder when it runs. The message is comprised of a quote, health/wellness 
-tip and the title of one of Paul Grahm's startup essays. */
+tip and the title of one of Paul Graham's startup essays. */
 
-// messageComponents is an obj with 3 properties: inspoQuotes, healthTips and paulGrahmEssays
+// messageComponents is an obj with 3 properties: inspoQuotes, healthTips and paulGrahamEssays
 const messageComponents = {
     // inspoQuotes is a nested array with the source of the quote at i=0 and the quote at i=1
     'inspoQuotes': [
@@ -25,15 +25,18 @@ const messageComponents = {
         ['Fred Wilson, Union Square Ventures co-founder', "A person who is quietly confident makes the best leader."],
         ['Steve Jobs, Apple Inc. co-founder', "Design is not just what it looks like and feels like. Design is how it works."],
     ],
-    //
+    // healthTips is an array of strings re: general health reminders
     'healthTips': ['make sure you drink 2L of water daily', "go for a shoft walk", "get 8 hours of sleep daily", 
         "meditate for 5-10 minutes",],
+    // paulGrahamEssays is an array of essay titles re: startups and building
     'paulGrahamEssays': ['Billionaires Build', 'How to Think for Yourself', 'Early Work', 
         "What Doesn't Seem Like Work?", 'Before the Startup', "Do Things that Don't Scale",
         "The Hardware Renaissance", 'Startup = Growth', 'A Word to be Resourceful',
     '   Why Startup Hubs Work', 'Founder Control', 'Keep Your Identity Small', 'Six Principles for Making New Things']
 }
 
+// function that takes in an obj as an arg, creates random selections indexes for the arrays and uses
+// the indexes to generate a random message
 const printRandomMessage = obj => {
     let selection1 = Math.floor((Math.random() * obj['inspoQuotes'].length))
     let selection2 = Math.floor((Math.random() * obj['healthTips'].length));
@@ -44,4 +47,4 @@ const printRandomMessage = obj => {
         '" by Paul Graham but remember, building a company is a marathon, not a sprint. So... \n' + obj['healthTips'][selection2] + '.'
 }
 
-console.log(printRandomMessage(messageComponents));
+console.log(printRandomMessage(messageComponents))
