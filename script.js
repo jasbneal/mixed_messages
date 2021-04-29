@@ -1,7 +1,10 @@
 /* Mixed Messages is a program that generates a random inspiration message 
 for a founder when it runs. */
 
-const inspo1 = ['A', 'B', 'C', 'D', 'E'];
+const inspo1 = ['"Always deliver more than expected." -Larry Page, co-founder at Google', 
+    '"Stay self-funded as long as possible." -Garrett Camp, co-founder Stumbleupon',
+    '"Ideas are easy. Implementation is hard." -Guy Kawasaki, AllTop co-founder', 
+    'D', 'E'];
 const inspo2 = [1, 2, 3, 4, 5];
 const inspo3 = ['Billionaires Build', 'How to Think for Yourself', 'Early Work', 
     "What Doesn't Seem Like Work?", 'Before the Startup', "Do Things that Don't Scale",
