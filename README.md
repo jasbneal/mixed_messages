@@ -42,3 +42,5 @@ obj['inspoQuotes'][selection1][1]`
 -----------------------
 
 ## 🍾 Launch
++ Clone the repo. In the terminal enter `$ git clone https://github.com/jasbneal/mixed_messages.git` and press Enter to create your local clone.
++ Use the `$ node script.js` command in the terminal/command line to run the program 
