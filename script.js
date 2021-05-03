@@ -7,7 +7,7 @@ const messageComponents = {
     // inspoQuotes is a nested array with the source of the quote at i=0 and the quote at i=1
     'inspoQuotes': [
         {
-            'name': 'Larry Page 
+            'name': 'Larry Page',
             'title': 'Google co-founder', 
             'quote': "Always deliver more than expected."
         },
@@ -113,10 +113,11 @@ const printRandomMessage = obj => {
     let selection1 = Math.floor((Math.random() * obj['inspoQuotes'].length))
     let selection2 = Math.floor((Math.random() * obj['healthTips'].length));
     let selection3 = Math.floor((Math.random() * obj['paulGrahamEssays'].length));
-    return `Being a founder is hard and sometimes a little inspiration goes a long way. \nA helpful quote from  
-        obj['inspoQuotes'][selection1]['name'], obj['inspoQuotes'][selection1]['title']:
-        obj['inspoQuotes'][selection1]['quote'] \nIf you need more insight, read "obj['paulGrahamEssays'][selection3]" by Paul Graham but remember, 
-        building a company is a marathon, not a sprint. So... \nobj['healthTips'][selection2].`
+    return `\n\nBeing a founder is hard and sometimes a little inspiration goes a long way.` + 
+    `\n\nA helpful quote from  ${obj['inspoQuotes'][selection1]['name']}, ${obj['inspoQuotes'][selection1]['title']}:
+"${obj['inspoQuotes'][selection1]['quote']}" \n\nIf you need more insight,` + 
+` read "${obj['paulGrahamEssays'][selection3]}" by Paul Graham but remember, 
+building a company is a marathon, not a sprint. So... ${obj['healthTips'][selection2]}.`
 }
 
 console.log(printRandomMessage(messageComponents))
