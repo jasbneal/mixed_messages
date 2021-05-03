@@ -18,7 +18,11 @@ The message components are stored in the `messageComponents` object. The keys re
 ```javascript
 const messageComponents = {
     'inspoQuotes': [
-        ['Larry Page, Google co-founder', "Always deliver more than expected."], cont.
+        {
+            'name': 'Larry Page',
+            'title': 'Google co-founder', 
+            'quote': "Always deliver more than expected."
+        }, cont.
     ]
     'healthTips': ['make sure you drink 2L of water daily', cont.],
     'paulGrahamEssays': ['Billionaires Build', cont.]
@@ -29,8 +33,8 @@ The random index of the array = Math.floor method * length of array then rounded
 
 `let selection1 = Math.floor((Math.random() * obj['inspoQuotes'].length))`
 
-`A helpful quote from ' + obj['inspoQuotes'][selection1][0] + ': ' + '"' +
-obj['inspoQuotes'][selection1][1]`
+`...A helpful quote from  ${obj['inspoQuotes'][selection1]['name']}, ${obj['inspoQuotes'][selection1]['title']}:
+"${obj['inspoQuotes'][selection1]['quote']}" cont.`
 
 -----------------------
 
