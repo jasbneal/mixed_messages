@@ -4,7 +4,7 @@ tip and the title of one of Paul Graham's startup essays. */
 
 // messageComponents is an obj with 3 properties: inspoQuotes, healthTips and paulGrahamEssays
 const messageComponents = {
-    // inspoQuotes is a nested array with the source of the quote at i=0 and the quote at i=1
+    // inspoQuotes is an array with objects nested in it to store the info per quote (name, title and quote)
     'inspoQuotes': [
         {
             'name': 'Larry Page',
